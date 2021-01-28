@@ -1,17 +1,22 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
 <p>Moteur de recheche</p>
-<form action="#">
-	<p>Mots clefs <input name="motclef" type="text"/></p>
+<form action="http://univcergy.phpnet.org/CCI/form.php">
+	<p>Mots clefs <input class="form-control"name="motclef" type="text"/></p>
 	<p>categorie</p>
-    <select  multiple="oui"name="categorie" id="pays">
+    <select  class="form-control"multiple="oui"name="categorie" id="pays">
 		<option value="jouet">Jouet</option>
         <option value="location">Location</option>
         <option value="Voitures">Voitures</option>
 	</select>
 	<p>Departement</p>
-    <select  name="dept" id="pays">
+    <select  class="form-control"name="dept" id="pays">
 		<option value="bretagne">bretagne</option>
         <option value="normandie">normandie</option>
         <option value="alsace">alsace</option>
 	</select>
-	<input type="submit" value="Chercher">
+	<input class="btn btn-success btn-lg"type="submit" value="Chercher">
 </form>
