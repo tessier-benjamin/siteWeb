@@ -1,0 +1,29 @@
+<script>
+function afficher(){
+var saisie =document.getElementById("categorie").value;
+if (saisie == "USA") {
+
+    document.getElementById("texte2").value="Washington" ;
+}
+if(saisie == "FRANCE"){
+    document.getElementById("texte2").value="Paris" ;
+}
+if(saisie == "ANGLETERRE"){
+    document.getElementById("texte2").value="Londres" ;
+}
+
+}
+</script>
+
+<div align="center">
+<form>
+<select id="categorie" multiple="oui" class="form-control" onclick="mafonction()">
+<option value="USA">USA</option>
+<option value="FRANCE">FRANCE</option>
+<option value="ANGLETERRE">ANGLETERRE</option>
+</select><br>
+<input type="button" id="bouton" value="Afficher" size="30" onclick="afficher()"><br><br>
+<input type="text" id="texte2"  size="30" value="">
+</form>
+</div>
+</html>
