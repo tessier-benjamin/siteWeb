@@ -1,0 +1,106 @@
+<head>
+<script language="JavaScript">
+
+var rep = new Array;
+var faite = new Array;
+var score = 0;
+ 
+rep[1] = "a";
+
+rep[2] = "a";
+
+rep[3] = "a";
+
+rep[4] = "a";
+
+rep[5] = "a";
+
+
+function Engine(question, reponse) {
+
+        if (reponse != rep[question]) {
+
+                if (!faite[question]) {
+
+                        faite[question] = -1;
+
+                        alert("Faux !!   La bonne réponse était la " + rep[question] );
+
+                        }
+
+                else {
+
+                        alert("Tu as déjà répondu à cette question !");
+
+                        }
+
+                }
+
+        else {
+
+                if (!faite[question]) {
+
+                        faite[question] = -1;
+
+                        score++;
+
+                        alert("Bonne réponse !! ");
+
+                        }
+
+                else { 
+
+                        alert("Tu as déjà répondu à cette question !");
+
+                        }
+
+                }
+
+}
+
+function NextLevel () {
+	alert("Vous avez eu "+score+" points");
+faite = new Array;
+score = 0;
+document.quest.reset();
+
+}
+
+</script>
+</head>
+
+<body>
+<br><form name="quest">
+<p>je suis beau
+<br><input type="radio" name="1" value="a" onclick="Engine(1, this.value)">a.absolument
+<br><input type="radio" name="1" value="b" onclick="Engine(1, this.value)">b.sans plus 
+<br><input type="radio" name="1" value="c" onclick="Engine(1, this.value)">c.meme pas en reve
+<br><input type="radio" name="1" value="d" onclick="Engine(1, this.value)">c.ptdr t ki
+<br>&nbsp;
+<p>je suis intelligent
+<br><input type="radio" name="2" value="a" onclick="Engine(2, this.value)">a.absolument
+<br><input type="radio" name="2" value="b" onclick="Engine(2, this.value)">b.sans plus 
+<br><input type="radio" name="2" value="c" onclick="Engine(2, this.value)">c.meme pas en reve
+<br><input type="radio" name="2" value="d" onclick="Engine(2, this.value)">c.ptdr t ki
+<br>&nbsp;
+<p>je suis fort
+<br><input type="radio" name="3" value="a" onclick="Engine(3, this.value)">a.absolument
+<br><input type="radio" name="3" value="b" onclick="Engine(3, this.value)">b.sans plus 
+<br><input type="radio" name="3" value="c" onclick="Engine(3, this.value)">c.meme pas en reve
+<br><input type="radio" name="3" value="d" onclick="Engine(3, this.value)">c.ptdr t ki
+<br>&nbsp;
+<p>je suis grand
+<br><input type="radio" name="4" value="a" onclick="Engine(4, this.value)">a.absolument
+<br><input type="radio" name="4" value="b" onclick="Engine(4, this.value)">b.dsans plus 
+<br><input type="radio" name="4" value="c" onclick="Engine(4, this.value)">c.meme pas en reve
+<br><input type="radio" name="4" value="d" onclick="Engine(4, this.value)">c.ptdr t ki
+<br>&nbsp;
+<p>je suis magnifique
+<br><input type="radio" name="5" value="a" onclick="Engine(5, this.value)">a.absolument
+<br><input type="radio" name="5" value="b" onclick="Engine(5, this.value)">b.sans plus 
+<br><input type="radio" name="5" value="c" onclick="Engine(5, this.value)">c.meme pas en reve
+<br><input type="radio" name="5" value="d" onclick="Engine(5, this.value)">c.ptdr t ki
+<br>&nbsp;
+<p><input type="button" name="Resultats" value="Résultats" onclick="NextLevel()">
+<p></form>
+</body>
