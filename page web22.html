@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function veriftel(){
+a=document.getElementById("login").value;
+b=document.getElementById("mdp").value;
+
+var motdepasse = ["tgbz","rtsh","htsrj","qrthtr","bricdelait95"];
+var login = ["jeunelimonde","fsefez","grezg","mrbenjbast"];
+testm = false ;
+testl=false;
+testa=false;
+
+for (var i=0 ; i<(login.length) ; i++) 
+{
+	if(a == login[i])
+	{
+		testl=true;
+	}
+}
+for (var j=0 ; j<(motdepasse.length) ; j++) 
+{
+	if(b == motdepasse[j])
+	{
+		testm=true;
+	}
+}
+
+if(testl == true )
+	{
+		if(testm == true )
+		{
+			testa=true;
+		}
+	}
+
+if (testa==false) {alert('Votre numéro de téléphone est incorrect.');}
+else {alert('Votre numéro de téléphone semble correct.');}
+return testm ;
+}
+</script>
+
+</head>
+<body>
+
+<form name="formulaire" action="test">
+entrez votre login : <input type="text" name="login" id="login" > 
+</br>
+entrez votre mot de passe : <input type="text" name="motdepasse" id="mdp" > 
+</br>
+<input type="button" value="Vérifier" onClick="veriftel()">
+</form>
+</body>
+</html>
