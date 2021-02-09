@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function veriftel(){
+a=document.getElementById("tel").value;
+testm = false ;
+
+if(a.length == '10')
+{
+	if(a.charAt(0) == '0')
+	{
+		testm = true;
+	}
+}
+
+if (testm==false) {alert('Votre numéro de téléphone est incorrect.');}
+else {alert('Votre numéro de téléphone semble correct.');}
+return testm ;
+}
+</script>
+
+</head>
+<body>
+
+<form name="formulaire" action="test">
+Entrez un numéro de telephone 
+<input type="number" name="tel" id="tel" >  
+<input type="button" value="Vérifier" onClick="veriftel()">
+</form>
+</body>
+</html>
