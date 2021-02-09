@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function verifMail(){
+a=document.getElementById("mail").value;
+testm = false ;
+
+for (var j=1 ; j<(a.length) ; j++) {
+
+
+  if (a.charAt(j)=='@') {
+   if (j<(a.length-4)){
+    for (var k=j ; k<(a.length-2) ; k++) {
+     if (a.charAt(k)=='.') testm = true;
+    }
+   }
+  }
+ }
+
+if (testm==false) {alert('Votre adresse e-mail est incorrecte.');}
+else {alert('Votre adresse e-mail semble correcte.');}
+return testm ;
+}
+</script>
+
+</head>
+<body>
+
+<form name="formulaire" action="test">
+Entrez une adresse e-mail  
+<input type="text" name="email" id="mail" >  
+<input type="button" value="Vérifier" onClick="verifMail()">
+</form>
+</body>
+</html>
